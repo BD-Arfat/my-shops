@@ -11,47 +11,35 @@ const Navbar = () => {
 
     return (
         <div>
-            <nav className="flex justify-between items-start px-10 py-5 relative bg-base-100 shadow-xl">
-                <img src="https://static.aadi.com.bd/static/store_front/assets/images/logo.svg" className='w-16' alt="" />
+            {/* <!-- This is an example component --> */}
+            <div class="">
 
-                <div className="hidden sm:flex gap-16">
-                    <ul className="flex gap-10 items-start">
-                        {items}
-                    </ul>
-
-                    <button className="bg-blue-700 text-white py-2 px-5">Get Started</button>
-                </div>
-
-                <button id="menu_btn" className="w-10 sm:hidden">
-                    <svg id="menu_bars" xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-                    </svg>
-
-                    <svg id="menu_close" xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-x hidden" viewBox="0 0 16 16">
-                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                    </svg>
-                </button>
-
-                {/* <!-- mobile menu --> */}
-                <div id="mobile_menu" className="absolute top-full bg-gray-100 right-10 left-10 hidden">
-                    <div className="flex flex-col gap-10 p-5 sm:hidden">
-                        <ul className="flex flex-col gap-2 items-center text-center">
-                            <li className="w-full">
-                                <a className="py-5 block" href="">About</a>
-                            </li>
-                            <li className="w-full">
-                                <a className="py-5 block" href="">Services</a>
-                            </li>
-                            <li className="w-full">
-                                <a className="py-5 block" href="">Pricing</a>
-                            </li>
-                        </ul>
-
-                        <button className="bg-blue-700 text-white py-2 px-5">Get Started</button>
+                <nav class="border-gray-200 shadow-xl px-2 md:px-16 mb-10 py-4  z-40">
+                    <div class="container mx-auto flex flex-wrap items-start justify-between">
+                        <img className='w-16' src="https://static.aadi.com.bd/static/store_front/assets/images/logo.svg" alt="" />
+                        <div class="flex md:order-2">
+                            <div class="relative mr-3 md:mr-0 hidden md:block">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                                </div>
+                                <input type="text" id="email-adress-icon" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2" placeholder="Search..."/>
+                            </div>
+                            <button data-collapse-toggle="mobile-menu-3" type="button" class="md:hidden text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-3" aria-expanded="false">
+                                <span class="sr-only">Open main menu</span>
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                                <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                        </div>
+                        <div class="hidden md:flex justify-between items-center w-full md:w-auto md:order-1" id="mobile-menu-3">
+                            <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
+                                {items}
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                </nav>
+            </div>
 
-            </nav>
+            <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
         </div>
     );
 };
