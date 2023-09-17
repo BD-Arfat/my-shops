@@ -17,11 +17,26 @@ const NewProduct = () => {
                 New products
 
             </h1>
-            <hr className='text-orange-500 w-28 text-2xl font-bold' />
+            <hr class="border-2 w-32 border-amber-500 hover:border-purple-500 drop-shadow-xl" />
 
-            {/* {
-                products.map(product => <Product key={product._id} product={product}/>)
-            } */}
+
+
+
+
+            <div class="container mx-auto w-full overflow-hidden relative mt-10">
+                <div class="w-full h-full absolute">
+                    {/* <div class="w-1/4 h-full absolute z-50 left-0" style={{background: "linear-gradient(to right, #edf2f7 0%, rgba(255, 255, 255, 0) 100%)"}}></div>
+            <div class="w-1/4 h-full absolute z-50 right-0" style={{background: "linear-gradient(to right, #edf2f7 0%, rgba(255, 255, 255, 0) 100%)"}}></div> */}
+                </div>
+
+                <div class="carousel-items flex items-center justify-center" style={{  animation: 'carouselAnim 10s infinite alternate linear' }}>
+
+                    {
+                        products.map(product => <Product key={product._id} product={product} />)
+                    }
+                </div>
+
+            </div>
 
         </div>
     );
