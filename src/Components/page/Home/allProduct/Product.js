@@ -1,10 +1,11 @@
 import React from 'react';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const Product = ({product}) => {
-    const { name, image, price, Color } = product;
+    const { name, image, price, Color, _id } = product;
     return (
-        <div>
+        <Link to={`/product/${_id}`}>
             <div class="w-96 md:w-1/2 lg:w-72 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2 ">
                 <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300 border-2 border-gray-600">
                     <figure class="mb-2">
@@ -30,7 +31,7 @@ const Product = ({product}) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 
